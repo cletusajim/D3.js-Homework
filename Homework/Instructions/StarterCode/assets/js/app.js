@@ -24,8 +24,6 @@ var svg = d3.select("#scatter")
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-// Initial Params
-
 // open csv
 d3.csv("assets/data/data.csv")
   .then(arrState=>{
@@ -67,8 +65,7 @@ d3.csv("assets/data/data.csv")
 			.attr("fill", "lightblue")
 			.attr("opacity", "1")
 		
-		// 6) create text labels. Note: instead of selecting all text tags, I select
-		// only those tags with the "circlelabel" class
+		// 6) create text labels. 
     var objTxt = g.selectAll(".circlelabel")
 			.data(arrState)
 			.enter()
